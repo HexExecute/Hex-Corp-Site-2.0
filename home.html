@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Hex Corp</title>
+	</head>
+	<body>
+		<div class="title_area">
+			<h1 id="title"><u>Hex Corp</u></h1>
+			<br />
+			<h2 id="subtitle">Best Corp</h2>
+		</div>
+		<div id="drop_down_button" onclick="dropDownButton()">
+			<h1 class="drop_down_text hidden">Home</h1>
+			<div class="drop_down_button_line"></div>
+			<h1 class="drop_down_text hidden">Docs</h1>
+			<div class="drop_down_button_line"></div>
+			<h1 class="drop_down_text hidden">About</h1>
+			<div class="drop_down_button_line"></div>
+		</div>
+		<script>
+			function dropDownButton() {
+				let lines = document.getElementsByClassName(
+					'drop_down_button_line'
+				)
+
+				let pages = document.getElementsByClassName('drop_down_text')
+
+				let button = document.getElementById('drop_down_button')
+
+				if (button.classList.contains('ddb_playing'))
+					button.classList.remove('ddb_playing')
+				else button.classList.add('ddb_playing')
+
+				setTimeout(() => {
+					for (text of pages) {
+						if (text.classList.contains('hidden'))
+							text.classList.remove('hidden')
+						else text.classList.add('hidden')
+					}
+				}, 1990)
+
+				for (line of lines)
+					if (line.classList.contains('ddbl_playing'))
+						line.classList.remove('ddbl_playing')
+					else line.classList.add('ddbl_playing')
+			}
+		</script>
+	</body>
+</html>

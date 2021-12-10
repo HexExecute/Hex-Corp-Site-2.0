@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+* {
+	--bg-1: #0a1c35;
+	--bg-2: #2a0920;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to right, var(--bg-1), var(--bg-2));
+}
+
+.hidden {
+	display: none;
+}
+
+.title_area {
+	text-align: center;
+}
+
+#title {
+	display: inline-block;
+	margin-top: 25vh;
+	margin-bottom: 0;
+	padding: 0;
+
+	font-family: 'Fira Sans', sans-serif;
+	color: goldenrod;
+
+	font-size: 12vw;
+
+	-webkit-user-select: none;
+
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#title:hover {
+	font-size: 13vw;
+	color: #6e0938;
+}
+
+#subtitle {
+	display: inline-block;
+	margin-top: 0;
+	padding: 0;
+
+	font-family: 'Fira Sans', sans-serif;
+	color: #797985;
+
+	font-size: 8vw;
+
+	-webkit-user-select: none;
+}
+
+#drop_down_button {
+	margin: 0;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+
+	list-style: none;
+	cursor: pointer;
+
+	text-align: center;
+}
+
+.drop_down_button_line {
+	background-color: goldenrod;
+	width: 50px;
+	height: 5px;
+	margin-top: 10px;
+}
+
+.ddbl_playing {
+	animation-name: open;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.ddb_playing {
+	animation-name: button_open;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.drop_down_text {
+	margin: 0;
+	padding: 0;
+
+	color: #797985;
+	font-family: 'Fira Sans', sans-serif;
+
+	animation-name: text_open;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+
+	opacity: 0;
+
+	transition: 0.5s;
+}
+
+.drop_down_text:hover {
+	color: white;
+}
+
+.ddblmt46 {
+	margin-top: 46px;
+}
+
+.ddblmt70 {
+	margin-top: 70px;
+}
+
+@keyframes text_open {
+	50% {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	75% {
+		opacity: 0;
+		cursor: default;
+	}
+	100% {
+		margin-top: 50px;
+		margin-bottom: -50px;
+		cursor: pointer;
+		opacity: 1;
+	}
+}
+
+@keyframes button_open {
+	0% {
+		cursor: default;
+	}
+	50% {
+		margin-top: 0;
+		cursor: default;
+	}
+	100% {
+		margin-top: -10px;
+		cursor: default;
+	}
+}
+
+@keyframes open {
+	0% {
+		width: 50px;
+	}
+	50% {
+		width: 200px;
+		margin-top: 46px;
+	}
+
+	99.99% {
+		width: 200px;
+		margin-top: 83px;
+	}
+	100% {
+		margin-top: 46px;
+		width: 200px;
+	}
+}
+
+@media screen and (max-device-width: 720px) and (orientation: portait) {
+}
